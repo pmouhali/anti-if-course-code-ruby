@@ -77,6 +77,10 @@ class GildedRose
   def sulfuras?(item)
     item.name == "Sulfuras, Hand of Ragnaros"
   end
+
+  def generic?(item)
+    !(sulfuras?(item) or backstage_passes?(item) or aged_brie?(item))
+  end
 end
 
 class Item
